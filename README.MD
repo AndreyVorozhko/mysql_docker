@@ -28,7 +28,7 @@ CONTAINER ID   IMAGE             COMMAND                  CREATED         STATUS
 Но база будет пустая. Чтобы залить в неё sql-дамп надо **из корня проекта** выполнить:
 
 ```bash
-cat ФАЙЛ-ДАМПА.sql | docker exec -i КОНТЕЙНЕР ../bin/mysql -u ЮЗЕР --password=ПАРОЛЬ ИМЯ-БАЗЫ
+cat ФАЙЛ-ДАМПА.sql | docker exec -i КОНТЕЙНЕР ./database/bin/mysql.exe -u ЮЗЕР --password=ПАРОЛЬ ИМЯ-БАЗЫ
 ```
 - database/dump/ФАЙЛ-ДАМПА.sql - заменить на имя файла вашего дампа (я положил 2 тренировочные базы из сети)
 - КОНТЕЙНЕР (имя докер-контейнера можно посмотреть в `deployer/.env`)
